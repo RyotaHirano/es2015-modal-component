@@ -1,0 +1,24 @@
+extends ../html/_layouts/base
+
+block vars
+  include ../html/_settings/data
+
+block content
+  .wrapper
+    header.header
+      h1.h1.header-title=metaTitle
+    .container
+      .c-btn-modal.c-btn--01
+        a.c-text-w--b.js-modal-open(href="")
+          | Modal
+
+      
+      .c-btn-modal
+        p.c-modal-caption.c-text-w--b
+          | ↓click image !!
+        a.js-modal-open--img(href="")
+          img(src="../img/dummy.jpg", alt="")
+  
+    footer.footer
+block prepend js
+  script(src="index.js?v=1")
