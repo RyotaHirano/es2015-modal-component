@@ -60,9 +60,11 @@ p {
   }
 
   &-img {
-    width: 100%;
-    max-width: 600px;
+    width: auto;
+    max-height: 300px;
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -116,6 +118,6 @@ p {
   height: 140px;
   background-color: #3e3e3e;
   display: table;
-  position: absolute;
+  position: relative;
   bottom: 0;
 }

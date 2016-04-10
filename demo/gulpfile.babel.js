@@ -8,7 +8,7 @@ requireDir('./gulp/tasks');
 
 gulp.task('predefault', cb => {
   runSequence(
-    ['jade', 'sass'],
+    ['jade', 'sass', 'webpack'],
     'serve',
     cb
   );
