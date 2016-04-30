@@ -43,6 +43,7 @@ p {
   width: 100%;
   min-height: 500px;
   font-size: 0;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -70,6 +71,7 @@ p {
 
 .c-btn {
   &-modal {
+    margin: 20px 0;
     border-radius: 22px;
     display: table;
     text-align: center;
@@ -83,7 +85,7 @@ p {
       line-height: 24px;
       color: #333;
       text-decoration: none;
-      padding: 16px 30px;
+      padding: 26px 30px;
       img {
         width: auto;
         max-width: 100%;
@@ -95,6 +97,9 @@ p {
 
   &--01 {
     background-color: #ffc107;
+  }
+  &--02 {
+    background-color: #FF9E07;
   }
 }
 

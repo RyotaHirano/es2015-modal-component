@@ -47,6 +47,6 @@
     "webpack": "^1.12.9"
   },
   "dependencies": {
-    "es2015-modal-component": "0.0.1"
+    "es2015-modal-component": "file:../"
   }
 }
