@@ -85,6 +85,25 @@
 	      modal.render((0, _jquery2.default)(img));
 	    });
 	  });
+
+	  // Modal Resized
+	  (0, _jquery2.default)('.js-modal-open--resize').each(function (i, el) {
+	    return new _es2015ModalComponent2.default(el, {
+	      modalScrollSelector: '.js-modal-resize-inner',
+	      isResizeModalHeight: true,
+	      modalHeightRatio: 0.6
+	    }).on('open', function (el, modal) {
+	      // Create Modal Contents
+	      var modalContents = document.createElement('div');
+	      modalContents.classList.add('c-modal', 'js-modal-resize-inner');
+	      var modalContentsParagraph = document.createElement('p');
+	      modalContentsParagraph.classList.add('c-text', 'c-text--l', 'c-text-w--b');
+	      modalContentsParagraph.textContent = 'This is Modal Contents.This is Modal Contents.This is Modal Contents.' + 'This is Modal Contents.This is Modal Contents.This is Modal Contents.' + 'This is Modal Contents.This is Modal Contents.This is Modal Contents.' + 'This is Modal Contents.This is Modal Contents.This is Modal Contents.' + 'This is Modal Contents.This is Modal Contents.This is Modal Contents.' + 'This is Modal Contents.This is Modal Contents.This is Modal Contents.' + 'This is Modal Contents.This is Modal Contents.This is Modal Contents.' + 'This is Modal Contents.This is Modal Contents.This is Modal Contents.' + 'This is Modal Contents.This is Modal Contents.This is Modal Contents.';
+	      modalContents.appendChild(modalContentsParagraph);
+	      // Modal render
+	      modal.render(modalContents);
+	    });
+	  });
 	};
 	initModal();
 
@@ -10084,9 +10103,9 @@
 	      var beforeModalH = (0, _jquery2.default)(this.opts.modalScrollSelector).height();
 	      var modalViewArea = modalTop + modalBodyTop + beforeModalH;
 
-	      if (modalViewArea > winH * this.modalHeightRatio) {
+	      if (modalViewArea > winH * this.opts.modalHeightRatio) {
 	        var _winH = (0, _jquery2.default)(window).outerHeight();
-	        var modalH = _winH * this.modalHeightRatio;
+	        var modalH = _winH * this.opts.modalHeightRatio;
 	        (0, _jquery2.default)(this.opts.modalScrollSelector).css({
 	          height: modalH,
 	          'overflow-y': 'scroll'
