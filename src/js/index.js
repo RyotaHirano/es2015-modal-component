@@ -98,9 +98,9 @@ export default class Modal extends EventEmitter {
     const beforeModalH = $(this.opts.modalScrollSelector).height();
     const modalViewArea = modalTop + modalBodyTop + beforeModalH;
 
-    if (modalViewArea > winH * this.modalHeightRatio) {
+    if (modalViewArea > winH * this.opts.modalHeightRatio) {
       const winH = $(window).outerHeight();
-      const modalH = winH * this.modalHeightRatio;
+      const modalH = winH * this.opts.modalHeightRatio;
       $(this.opts.modalScrollSelector).css({
         height: modalH,
         'overflow-y': 'scroll'
