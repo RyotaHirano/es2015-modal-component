@@ -36,15 +36,15 @@ $('.js-modal-open').each((i, el) => {
 });
 
 // Inner Scroll Modal
-$('.js-modal-open').each((i, el) => {
+$('.js-inner-scroll-modal-open').each((i, el) => {
   return new Modal(el, {
-    modalScrollSelector: '.js-modal-resize-inner',
+    modalScrollSelector: '.js-modal-scroll-inner',
     isResizeModalHeight: true,
     modalHeightRatio: 0.6
   }).on('open', function(el, modal) {
     // Create Modal Contents
     const modalContents = document.createElement('div');
-    modalContents.classList.add('c-modal', 'js-modal-resize-inner');
+    modalContents.classList.add('c-modal', 'js-modal-scroll-inner');
     const modalContentsParagraph = document.createElement('p');
     modalContentsParagraph.classList.add('c-text', 'c-text--l', 'c-text-w--b');
     modalContentsParagraph.textContent = 'This is Inner Scroll Modal Contents. This i...';
@@ -68,6 +68,8 @@ $('.js-modal-open').each((i, el) => {
 ### html
 ```html
 <a href="" class="js-modal-open">Modal Open</a>
+
+<a href="" class="js-inner-scroll-modal-open">Inner Scroll Modal Open</a>
 ```
 
 ## License
